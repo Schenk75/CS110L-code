@@ -15,11 +15,23 @@ fn add_n(v: Vec<i32>, n: i32) -> Vec<i32> {
 }
 
 fn add_n_inplace(v: &mut Vec<i32>, n: i32) {
-    unimplemented!()
+    for a in v {
+        *a += n;
+    }
 }
 
 fn dedup(v: &mut Vec<i32>) {
-    unimplemented!()
+    let mut set = HashSet::new();
+    let mut len = v.len();
+    let mut i = 0;
+    while i < len {
+        if !set.insert(v[i]) {
+            v.remove(i);
+            len -= 1;
+            continue;
+        }
+        i += 1;
+    }
 }
 
 #[cfg(test)]
