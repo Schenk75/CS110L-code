@@ -1,5 +1,5 @@
 [package]
-name = "week2-linked-list"
+name = "derive-traits"
 version = "0.1.0"
 authors = ["schenk <sck_01@qq.com>"]
 edition = "2018"
